@@ -1,5 +1,5 @@
 /*
-const timeConstantsMilis = {
+const timeConstantsMillis = {
     s: 1_000,
     m: 60_000,
     h: 3_600_000,
@@ -7,7 +7,7 @@ const timeConstantsMilis = {
     w: 604_800_000
 }
 */
-const timeConstantsMilis = {
+const timeConstantsMillis = {
     s: 1_000,
     get m() { return this.s * 60 },
     get h() { return this.m * 60 },
@@ -32,16 +32,16 @@ function stringToMilis(input) {
         }
 
         const suffixUnit = token.substring(token.length - 1)
-        if (!(suffixUnit in timeConstantsMilis)) {
+        if (!(suffixUnit in timeConstantsMillis)) {
             throw ('Invalid Time Format')
         }
         const prefixNum = token.substring(0, token.length - 1)
         
-        if (!suffixUnit in timeConstantsMilis || !isPositiveInteger(prefixNum)) {
+        if (!suffixUnit in timeConstantsMillis || !isPositiveInteger(prefixNum)) {
             throw ('Invalid Time Format')
         }
 
-        milis += (timeConstantsMilis[suffixUnit] * prefixNum)
+        milis += (timeConstantsMillis[suffixUnit] * prefixNum)
     }
 
     return milis

@@ -78,19 +78,7 @@ const init = (client) => {
         submitTicket(client, interaction)
     })
 }
-/*
-function init(client) {
-    client.on("interactionCreate", async (interaction) => {
-        if (!interaction.isButton() || !(interaction.customId === customIds.SUBMIT)) {
-            if (interaction.customId === customIds.CANCEL) {
-                cancelTicket(interaction)
-            }
-            return
-        }
-        submitTicket(client, interaction)
-    })
-}
-*/
+
 async function createTicket(interaction) {
     const userID = interaction.user.id
     const userName = interaction.options.getString('ign')
@@ -240,12 +228,6 @@ async function canVerify(userID) {
 }
 
 const run = async (client, interaction) => {
-    /*
-    if (!hasInitialized) {
-        hasInitialized = true
-        init(client)
-    }
-    */
     createTicket(interaction)
 }
 

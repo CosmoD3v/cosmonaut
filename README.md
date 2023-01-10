@@ -1,0 +1,2 @@
+# cosmonaut
+Personal discord bot

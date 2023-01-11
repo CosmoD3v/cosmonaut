@@ -50,10 +50,12 @@ So, I created a command on my bot that asks the user for their IGN and for them 
 
 ### _Technologies Used_:
 
-I incorporated the use of Puppeteer.js in order to give my bot the ability to verify user profiles on the web.
+The incorporation of Puppeteer.js gave my bot the ability to verify user profiles on the web.
 Puppeteer allows you to naviage to webpages via a headless chromium browser and perform all kinds of cool actions while you're there.
+
 I knew this option wouldn't scale well in terms of memory usage and processing power but I decided it wouldn't affect my project as the number of requests would be low enough for it to not matter.
 If however this becomes an issue in the futere, I will utilize API calls instead.
+
 I had considered using an API for RealmEye but decided it would be easier and more reliable to simply scrape the page for necessary information. 
 Additionally, I think the web scraping route was the smarter choice in the end as it taught me a lot of new skills in terms of creating tools to interact with websites that allow it.
 

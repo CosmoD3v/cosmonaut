@@ -4,6 +4,7 @@ const pluginStealth = require('puppeteer-extra-plugin-stealth')
 puppeteer.use(pluginStealth())
 const {executablePath} = require('puppeteer')
 
+const codePrefix = 'ARIGATO'
 const customIds = {
     SUBMIT: 'verify-submit-button',
     CANCEL: 'verify-cancel-button'
@@ -24,6 +25,12 @@ const status = {
     .setColor(THEME)
     .setTitle("Verification Request Canceled")
     .setImage(statusImage.CANCELED)
+    ,
+    OLD_TICKET: new EmbedBuilder()
+    .setColor(THEME)
+    .setTitle("Ticket Closed")
+    .setDescription("```This ticket was removed from the bot cache," +
+    "\nplease close previous message and try again.```")
     ,
     DUPLICATE_TICKET: new EmbedBuilder()
     .setColor(THEME)
@@ -93,7 +100,7 @@ async function createTicket(interaction) {
     }
 
     // Create ticket for new verify request
-    const verifyKey = 'ARIGATO+' + generateString(10)
+    const verifyKey = codePrefix + '+' + generateString(10)
     await interaction.reply({
         embeds: [status.NEW_TICKET
             .setTitle('Verify request for ' + userName)
@@ -114,6 +121,16 @@ async function createTicket(interaction) {
 
 function cancelTicket(interaction) {
     const discordUserID = interaction.user.id
+
+    if (!(discordUserID in verifyRequests)) {
+        interaction.reply({
+            embeds: [status.OLD_TICKET],
+            components: [],
+            ephemeral: true
+        })
+        return
+    }
+
     let originalInteraction = verifyRequests[discordUserID]["interaction"]
     delete verifyRequests[discordUserID]
     originalInteraction.editReply({
@@ -129,6 +146,16 @@ async function submitTicket(client, interaction) {
     const discordUserID = interaction.user.id
     const user = guild.members.cache.get(interaction.user.id)
     let userTag = interaction.user.tag
+
+    if (!(discordUserID in verifyRequests)) {
+        interaction.reply({
+            embeds: [status.OLD_TICKET],
+            components: [],
+            ephemeral: true
+        })
+        return
+    }
+
     let originalInteraction = verifyRequests[discordUserID]["interaction"] //error reading interaction? botan
 
     // Begin web-scraping Realmeye
@@ -193,33 +220,43 @@ async function canVerify(userID) {
 
     let verifySuccessful
     let attempts = 0
-    try {
-        while(true) {
-            await page.goto("https://www.realmeye.com/player/" + verifyRequests[userID]["name"])
+    const possibleIds = ['d', 'e']
+        
+    for (const id of possibleIds) {
+        try {
+            while(true) {
 
-            let description = ''
+                let description = ''
+                await page.goto("https://www.realmeye.com/player/" + verifyRequests[userID]["name"])
+                
+                //await page.waitForXPath('//*[@id="d"]/div[1]')
+                let [el0] = await page.$x('//*[@id="' + id + '"]/div[1]')
+                let txt0 = await el0.getProperty('textContent')
+                description += await txt0.jsonValue()
 
-            let [el0] = await page.$x('//*[@id="d"]/div[1]')
-            let txt0 = await el0.getProperty('textContent')
-            description += await txt0.jsonValue()
+                //await page.waitForXPath('//*[@id="d"]/div[2]')
+                let [el1] = await page.$x('//*[@id="' + id + '"]/div[2]')
+                let txt1 = await el1.getProperty('textContent')
+                description += await txt1.jsonValue()
+                
+                //await page.waitForXPath('//*[@id="d"]/div[3]')
+                let [el2] = await page.$x('//*[@id="' + id + '"]/div[3]')
+                let txt2 = await el2.getProperty('textContent')
+                description += await txt2.jsonValue()
 
-            let [el1] = await page.$x('//*[@id="d"]/div[2]')
-            let txt1 = await el1.getProperty('textContent')
-            description += await txt1.jsonValue()
+                verifySuccessful = description.includes(verifyRequests[userID]["key"])
+                if (verifySuccessful) { break }
+                if (attempts >= 2) { break }
+                attempts++
+                await sleep(20000)
 
-            let [el2] = await page.$x('//*[@id="d"]/div[3]')
-            let txt2 = await el2.getProperty('textContent')
-            description += await txt2.jsonValue()
+            }
+        break
 
-            verifySuccessful = description.includes(verifyRequests[userID]["key"])
-            if (verifySuccessful) { break }
-            if (attempts >= 2) { break }
-            attempts++
-            await sleep(20000)
+        } catch (err) {
+            console.log(err) // Type error when searching for a user page that doesn't exist or when Realmeye updates xPath id for description
+            verifySuccessful = false
         }
-    } catch (err) {
-        console.log(err) // Type error when searching for a user page that doesn't exist
-        verifySuccessful = false
     }
 
     await page.close()

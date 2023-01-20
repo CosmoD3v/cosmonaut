@@ -15,7 +15,7 @@ const timeConstantsMillis = {
     get w() { return this.d * 7 }
 }
 
-function stringToMilis(input) {
+function stringToMillis(input) {
     function isPositiveInteger(str) {
         const num = Number(str)
         if (!Number.isInteger(num) || num < 0) {
@@ -24,7 +24,7 @@ function stringToMilis(input) {
         return true
     }
 
-    let milis = 0
+    let millis = 0
     let tokens = input.split(' ')
     for (const token of tokens) {
         if (token.length < 2) {
@@ -41,18 +41,18 @@ function stringToMilis(input) {
             throw ('Invalid Time Format')
         }
 
-        milis += (timeConstantsMillis[suffixUnit] * prefixNum)
+        millis += (timeConstantsMillis[suffixUnit] * prefixNum)
     }
 
-    return milis
+    return millis
 }
 
 const run = async (client, interaction) => {
     const { options } = interaction
     const input = options.getString('length')
-    let milis
+    let millis
     try {
-        milis = stringToMilis(input)
+        millis = stringToMillis(input)
     } catch (error) {
         interaction.reply({
             content: `${error}`,
@@ -61,7 +61,7 @@ const run = async (client, interaction) => {
         return
     }
     interaction.reply({
-        content: `\`${input}\` is ${milis} milis`,
+        content: `\`${input}\` is ${millis} millis`,
         ephemeral: true,
     })
 }
@@ -79,5 +79,5 @@ module.exports = {
     }],
     init,
     run,
-    stringToMilis
+    stringToMillis
 }

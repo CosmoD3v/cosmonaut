@@ -85,7 +85,7 @@ const run = async (client, interaction) => {
     // Fail-case for invalid time input
     let pollDurationMillis
     try {
-        pollDurationMillis = Timer.stringToMilis(options.getString(customIds.DURATION))
+        pollDurationMillis = Timer.stringToMillis(options.getString(customIds.DURATION))
     } catch (invalidTimeFormat) {
         let embed = new EmbedBuilder()
         .setColor(theme)

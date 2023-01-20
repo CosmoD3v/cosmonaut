@@ -1,18 +1,29 @@
 # cosmonaut - Discord Bot
 
-## Goals
-I embarked on this personal project in order to demonstrate my current level programming skills.
-A secondary goal was to illustrate my ability to quicky learn a new development environment and be able to write features for it competently.
-Finally, I've always wanted to write a bot for my own personal uses for Discord; Being able to develop bots on this platform for any interest I could ever have sounded like a really cool skill to have.
+## Why I created a Discord bot...
+I began writing this bot back in December because I saw the opportunity to simultaneously complete multiple goals I had set for myself.
+I saw no better option for this project than to program a Discord bot because it acted as the catalyst for completing all these goals in one.
+So, I embarked on this personal project to demonstrate my current level programming skills, learn a new programming language, and create a bot to solve problems I wanted to address.
 
-I saw no better option for this project than to program a Discord bot.
-Not only did I chose to write this bot in JavaScript is something I am unfamiliar with, but I have always wanted to get involved with the Discord developer environment.
-Knocking out my professional and personal goals in one project was not only time efficient, it was a great way to learn so many new technologies that I was unfamiliar with previously.
+1. I have been trying to think of a project to show off where my skills are as a programmer currently.
+Putting in a lot of hours writing code the past year has allowed me to create a bot that could not only be used by myself and others, but would be a great project to show off on my portfolio.
+This is but one of a few things I wanted to utilize to show off my competency as a Software Developer.
 
-To list just a few new technologies I have learned to incorporate in my projects is __Optical Character Recognition (OCR)__, __Web-Scraping__, and making __API calls to Google and Discord__. I utilized OCR when writing a script to identify usernames from a screenshot to help my bot achieve the ability to compare lists. My bot also incorporates the use of API calls both to Discord and Google services in order to request information and respond to user input.
+2. Another goal I completed was to illustrate my ability to quicky learn a new development environment and be able to competently write features for it.
+I chose to write this bot in JavaScript, which is something I am unfamiliar with and wanted to learn.
+It only took me a couple weeks of development to feel confident in my work flow and understanding of the language both in-general and with the Discord wrapper.
 
-***
-# Features
+3. Finally, I've always wanted to write a bot for my own personal uses for Discord; Being able to develop bots on this platform for any interest I could ever have sounded like a really cool skill to have.
+I have always wanted to get involved with the Discord developer environment and write my own integrations as it would be an awesome outlet to pour my ideas into.
+
+Knocking out my professional and personal goals in one project was not only time efficient, it was a great way to learn so many new technologies that I was unfamiliar with previously. Here are just a few things I incorporated into my project in order to make it work...
+
+## Technologies Used:
+* __Optical Character Recognition (OCR)__
+* __Web-Scraping__
+* __API calls to Google and Discord__.
+
+# Features (Explained)
 
 ## ___Parse___
 
@@ -57,7 +68,7 @@ I knew this option wouldn't scale well in terms of memory usage and processing p
 If however this becomes an issue in the futere, I will utilize API calls instead.
 
 I had considered using an API for RealmEye but decided it would be easier and more reliable to simply scrape the page for necessary information. 
-Additionally, I think the web scraping route was the smarter choice in the end as it taught me a lot of new skills in terms of creating tools to interact with websites that allow it.
+Additionally, I think the web scraping route was the smarter choice in the end, as it taught me a lot of new skills in terms of creating tools to interact with websites that allow it.
 
 |Usage|
 |----|
@@ -109,7 +120,7 @@ The obvious next option would be to develop a solution entirely contained within
 ## ___Timer___
 
 One issue I ran into when writing the Poll command was the need for input validation for time durations.
-The slash command interface supplied by Discord allows you to specific input validation that happens before you even send the command.
+The slash command interface supplied by Discord allows you to perform input validation that happens before you even send the command.
 However, because time inputs were are not officially supported, I implemented my own validation interface that follows a simple pattern.
 
 *eg: 1w 2d 3h 4m 5s*

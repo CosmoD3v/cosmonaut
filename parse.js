@@ -36,7 +36,7 @@ const run = async (client, interaction) => {
     let deltaSeconds = ((t1-t0) / 1000).toFixed(2)
 
     embed
-    .setTitle("__Parse for " + user.user.username + "__")
+    .setTitle("__Parse for " + user.nickname + "__")
     .setDescription("**Raiders Found : " + raidersCount + "\nCrashers: " + crashersCount + "**\n```" + kickString + "```")
     .setImage(attachment.url)
     .setFooter({

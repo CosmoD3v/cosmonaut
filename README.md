@@ -38,15 +38,15 @@ A demonstration of this feature in use:
 
 |Discord|In-Game|
 |----|----|
-|![DiscordVC](https://media.discordapp.net/attachments/1044495816489967626/1062809604158926979/image.png)|![InGameWho](https://media.discordapp.net/attachments/1044495816489967626/1062810992301580328/image.png)|
+|![DiscordVC](https://media.discordapp.net/attachments/1044495816489967626/1062809604158926979/image.png?ex=660da893&is=65fb3393&hm=b943032f11cd6ce9bcaf485d16071a43f91cd7c14c9ceda7c34454fcf3230f80&=&format=webp&quality=lossless)|![InGameWho](https://media.discordapp.net/attachments/1044495816489967626/1062810992301580328/image.png?ex=660da9de&is=65fb34de&hm=fc954fb1605ede5ba834490ec7f659bdc3808ba71797d1527b19797c609e609e&=&format=webp&quality=lossless)|
 
 |Usage|
 |----|
-|![ParseUsage](https://media.discordapp.net/attachments/1044495816489967626/1062816932966973520/image.png)|
+|![ParseUsage](https://media.discordapp.net/attachments/1044495816489967626/1062816932966973520/image.png?ex=660daf67&is=65fb3a67&hm=e19156c96fac9abfdf4c2f9d542636e94e27a686b024cf8e1f6c7aab5c0ec5d8&=&format=webp&quality=lossless)|
 
 |Result|
 |----|
-|![ParseResult](https://media.discordapp.net/attachments/1044495816489967626/1062813956965679156/image.png)|
+|![ParseResult](https://media.discordapp.net/attachments/1044495816489967626/1062813956965679156/image.png?ex=660daca1&is=65fb37a1&hm=2f5b65f2306e134c2cd195450c9e977f0da3c9cae3b27aed1b2078a07c02cee8&=&format=webp&quality=lossless)|
 
 ---
 
@@ -72,15 +72,15 @@ Additionally, I think the web scraping route was the smarter choice in the end, 
 
 |Usage|
 |----|
-|![VerifyUsage](https://media.discordapp.net/attachments/1044495816489967626/1062825424243150898/image.png)|
+|![VerifyUsage](https://media.discordapp.net/attachments/1044495816489967626/1062825424243150898/image.png?ex=660db74f&is=65fb424f&hm=f2bc2ebe6b3e34b7558cefc1055e389b24787f99a271594fa7a052edb8c68fbd&=&format=webp&quality=lossless)|
 
 |Request|
 |----|
-|![VerifyRequest](https://cdn.discordapp.com/attachments/1044495816489967626/1062824552704516146/image.png)|
+|![VerifyRequest](https://media.discordapp.net/attachments/1044495816489967626/1062824552704516146/image.png?ex=660db67f&is=65fb417f&hm=73619790e2fa3e69093ecd463aa21abb08f5ee6404735a7cb2f34288605b3c0d&=&format=webp&quality=lossless)|
 
 |User WebPage|
 |----|
-|![VerifyWebPage](https://media.discordapp.net/attachments/1044495816489967626/1062828228848390184/image.png)|
+|![VerifyWebPage](https://cdn.discordapp.com/attachments/1044495816489967626/1062828228848390184/image.png?ex=660db9ec&is=65fb44ec&hm=3ae837e48aaa14a4aa7b842dbd180031a64b57a7a6eb8cd4667d831f49306f69&)|
 
 ---
 
@@ -92,28 +92,28 @@ The obvious next option would be to develop a solution entirely contained within
 
 |Usage|
 |----|
-|![PollUsage](https://media.discordapp.net/attachments/1044495816489967626/1062861741966512188/image.png)|
+|![PollUsage](https://media.discordapp.net/attachments/1044495816489967626/1062861741966512188/image.png?ex=660dd922&is=65fb6422&hm=5b7ecd2df74d244062c44f2dd08baa505388b464b363064090a357ad400c328b&=&format=webp&quality=lossless)|
 
 
 |Description|Choices Menu|
 |----|----|
-|![PollDescription](https://cdn.discordapp.com/attachments/1044495816489967626/1062862687350042716/image.png)|![PollDescription](https://media.discordapp.net/attachments/1044495816489967626/1062863316390789230/image.png)|
+|![PollDescription](https://media.discordapp.net/attachments/1044495816489967626/1062862687350042716/image.png?ex=660dda03&is=65fb6503&hm=084caf32a28b639508e26b46849df561610853f3dd10987f777200df29e718d7&=&format=webp&quality=lossless)|![ChoicesMenu](https://cdn.discordapp.com/attachments/1044495816489967626/1062863316390789230/image.png?ex=660dda99&is=65fb6599&hm=a870826d77ea14ed75d6efa91934c9d24f061d1fce85389b9990e19e273351c1&)|
 
 |Secondary Menu|
 |----|
-|![PollSecondaryMenu](https://media.discordapp.net/attachments/1044495816489967626/1062863070940106942/image.png)|
+|![PollSecondaryMenu](https://media.discordapp.net/attachments/1044495816489967626/1062863070940106942/image.png?ex=660dda5f&is=65fb655f&hm=79161084dc74f7e5916f630c29650290bab1fddcc6dc5dfd84c29fc88e6dd44c&=&format=webp&quality=lossless)|
 
 |Poll|
 |----|
-|![PollRunning](https://media.discordapp.net/attachments/1044495816489967626/1062847668172361849/image.png)|
+|![PollRunning](https://cdn.discordapp.com/attachments/1044495816489967626/1062847668172361849/image.png?ex=660dcc06&is=65fb5706&hm=c2ed75df866b99b9ce17208e24330dc062d1a49ab849d526aea3580ec44a3740&)|
 
 |Voting|
 |----|
-|![PollVoting](https://media.discordapp.net/attachments/1044495816489967626/1062846972949704806/image.png)|
+|![PollVoting](https://media.discordapp.net/attachments/1044495816489967626/1062846972949704806/image.png?ex=660dcb61&is=65fb5661&hm=482d15bc618ec0d04af1e72d4e6504fce68994a26daefb111434024fa81cb9fd&=&format=webp&quality=lossless)|
 
 |Results|
 |----|
-|![PollResults](https://media.discordapp.net/attachments/1044495816489967626/1062846797623607427/image.png)|
+|![PollResults](https://media.discordapp.net/attachments/1044495816489967626/1062846797623607427/image.png?ex=660dcb37&is=65fb5637&hm=11fb67ceb1114709ff3d8a78c7c4ee946464966392ad3662745aaf253d5458ee&=&format=webp&quality=lossless)|
 
 ---
 
@@ -130,11 +130,11 @@ I'm sure there are other similar implementations that would work for my case, bu
 
 |Usage|
 |----|
-|![TimerUsage](https://media.discordapp.net/attachments/1044495816489967626/1062868740204662855/image.png)|
+|![TimerUsage](https://media.discordapp.net/attachments/1044495816489967626/1062868740204662855/image.png?ex=660ddfa6&is=65fb6aa6&hm=4de6e783657f4b8567f30e253e8e471e0b5f0425f41937f43c3491c2a45b70d7&=&format=webp&quality=lossless)|
 
 |Example Output|
 |----|
-|![TimerExampleOutput](https://media.discordapp.net/attachments/1044495816489967626/1062869594525667398/image.png)|
+|![TimerExampleOutput](https://media.discordapp.net/attachments/1044495816489967626/1062869594525667398/image.png?ex=660de072&is=65fb6b72&hm=b9b1ae8209a6bcec46caeb03eec2f0088ffb1cb0689c2fc4d36990130f8e833b&=&format=webp&quality=lossless)|
 
 ---
 
@@ -145,7 +145,7 @@ There's not a lot to explain about this feature, just a simple, helpful tool for
 
 |Usage|
 |----|
-|![CleanUsage](https://media.discordapp.net/attachments/1044495816489967626/1062837249563168828/image.png)|
+|![CleanUsage](https://media.discordapp.net/attachments/1044495816489967626/1062837249563168828/image.png?ex=660dc252&is=65fb4d52&hm=67fb3837df99d2457c8ace9443db16b0f1a4e957c99b2ef827ca0dd939719e58&=&format=webp&quality=lossless)|
 
 ---
 
@@ -157,8 +157,8 @@ I also gave the choice to obtain one's own avatar by not supplying the optional 
 
 |Usage|
 |----|
-|![AvatarUsage](https://media.discordapp.net/attachments/1044495816489967626/1062870983293292575/image.png)|
+|![AvatarUsage](https://media.discordapp.net/attachments/1044495816489967626/1062870983293292575/image.png?ex=660de1bd&is=65fb6cbd&hm=b99bf6656cb452eb70987b6556bfa876eb35277dd51e8cc571ef93f6af321cac&=&format=webp&quality=lossless)|
 
 |Result|
 |----|
-|![AvatarResult](https://cdn.discordapp.com/attachments/1044495816489967626/1062870480375255070/image.png)|
+|![AvatarResult](https://media.discordapp.net/attachments/1044495816489967626/1062870480375255070/image.png?ex=660de145&is=65fb6c45&hm=637429a3f624a84906755c64aa30b3be8916990af902b82345a16465681197e5&=&format=webp&quality=lossless&width=354&height=350)|
